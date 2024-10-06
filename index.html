@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Desktop View -->
+    <header class="container-fluid d-none d-lg-block">
+      <nav class="container">
+        <div class="row navbar-custom py-3">
+          <!-- Left side (Brand Name) -->
+          <div class="col-md-2 navbar-left text-start">
+            <a class="navbar-brand" href="#">dimend<strong>SCAASI</strong></a>
+          </div>
+
+          <!-- Center menu (Desktop only) -->
+          <div class="col-md-8 navbar-center">
+            <ul class="d-flex justify-content-center mb-0 gap-5 pt-1">
+              <li><a href="#">Diamonds</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Fine Jewelry</a></li>
+              <li><a href="#">Watches</a></li>
+            </ul>
+          </div>
+
+          <!-- Right side icons -->
+          <div class="col-md-2 navbar-right text-end">
+            <a class="text-dark" href="#"><i class="bi bi-search"></i></a>
+            <a class="text-dark" href="#"><i class="bi bi-heart"></i></a>
+            <a class="text-dark" href="#"><i class="bi bi-person-fill"></i></a>
+          </div>
+        </div>
+
+        <!-- Inquiry and Feedback row -->
+        <div class="row justify-content-between below-nav">
+          <div class="col-auto">
+            <a class="text-decoration-none text-dark" href="#">
+              <i class="bi bi-chat-left-text-fill"></i>
+              <span>Inquiry</span>
+            </a>
+          </div>
+          <div class="col-auto">
+            <a class="text-decoration-none text-dark" href="#">
+              <i class="bi bi-person-fill"></i>
+              <span class="ms-1">Feedback</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile View (Bootstrap Offcanvas) -->
+    <header class="container-fluid d-lg-none">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Hamburger button for mobile -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Brand Name in the center for mobile -->
+          <a class="navbar-brand mx-auto" href="#"
+            >dimend<strong>SCAASI</strong></a
+          >
+
+          <!-- Right-side icons for mobile -->
+          <div class="d-flex align-items-center">
+            <span class="bi bi-search me-3"></span>
+            <span class="bi bi-person-fill"></span>
+          </div>
+
+          <!-- Offcanvas for mobile sidebar -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <!-- Accordion for menu items on mobile -->
+              <div class="accordion" id="accordionMenu">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Diamonds
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionMenu"
+                  >
+                    <div class="accordion-body">Content about diamonds.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Accessories
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionMenu"
+                  >
+                    <div class="accordion-body">Content about accessories.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Fine Jewelry
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionMenu"
+                  >
+                    <div class="accordion-body">
+                      Content about fine jewelry.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Watches
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionMenu"
+                  >
+                    <div class="accordion-body">Content about watches.</div>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Inquiry and Feedback for mobile -->
+              <div class="mt-4 d-flex flex-column gap-3 mob-nav-bottom ms-2">
+                <a class="text-decoration-none text-dark" href="#">
+                  <i class="bi bi-chat-left-text"></i>
+                  <span>Inquiry</span>
+                </a>
+                <a class="text-decoration-none text-dark" href="#">
+                  <i class="bi bi-person-fill"></i>
+                  <span>Feedback</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- banner section -->
+    <section class="container-fluid py-5">
+      <div class="banner text-center">
+        <div class="ring-container">
+          <img
+            src="/img/banner3.png"
+            alt="Ring 1"
+            class="ring left"
+            id="left"
+            data-title="Hidden Halo"
+            data-price="$3500"
+            data-description="Take 10% off for a limited time. Use Code: LOVE10"
+          />
+          <img
+            src="/img/banner1.png"
+            alt="Ring 2"
+            class="ring active center"
+            id="center"
+            data-title="Vintage & Antique"
+            data-price="$4500"
+            data-description="Take 20% off for a limited time. Use Code: LOVE20"
+          />
+          <img
+            src="/img/banner2.png"
+            alt="Ring 3"
+            class="ring right"
+            id="right"
+            data-title="Pave"
+            data-price="$2500"
+            data-description="Take 5% off for a limited time. Use Code: LOVE05"
+          />
+        </div>
+
+        <h3 class="fw-bold bannerh">Vintage & Antique</h3>
+        <p class="border-top d-inline fw-bold">$4500</p>
+        <p class="banner-perce pt-2 m-auto">
+          Take 20% off for a limited time. Use Code: LOVE20
+        </p>
+        <button class="btn bg-dark text-white mt-5 rounded-5 px-5">
+          View Details
+        </button>
+      </div>
+    </section>
+
+    <!-- our collection -->
+    <section class="collection-cards py-5">
+      <div class="container-fluid collection-head">
+        <h3 class="text-center fw-bold">Our Collection</h3>
+        <p class="text-center pt-md-2 mx-auto">
+          Discover our elegant and unique fine jewelry collections, ranging from
+          classic diamond studs to stylish pendants and dazzling bracelets.
+        </p>
+      </div>
+
+      <!-- Orange background div -->
+      <div class="orange-bg"></div>
+
+      <!-- Collection Cards Section -->
+      <div class="pt-md-5">
+        <div class="container collection-container px-lg-5">
+          <div class="row text-center justify-content-center">
+            <div class="col-3">
+              <div class="card border-0 rounded-0">
+                <img
+                  src="/img/coll1.svg"
+                  class="card-img-top rounded-0"
+                  alt="Wedding Rings"
+                />
+                <div class="card-body px-0 px-sm-1 py-2 py-sm-3">
+                  <h5 class="card-title fw-bold">Wedding Rings</h5>
+                  <p class="card-text">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card border-0 rounded-0">
+                <img
+                  src="/img/coll2.svg"
+                  class="card-img-top rounded-0"
+                  alt="Wedding Rings"
+                />
+                <div class="card-body px-0 px-sm-1 py-2 py-sm-3">
+                  <h5 class="card-title fw-bold">Wedding Rings</h5>
+                  <p class="card-text">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card border-0 rounded-0">
+                <img
+                  src="/img/coll3.svg"
+                  class="card-img-top rounded-0"
+                  alt="Wedding Rings"
+                />
+                <div class="card-body px-0 px-sm-1 py-2 py-sm-3">
+                  <h5 class="card-title fw-bold">Wedding Rings</h5>
+                  <p class="card-text">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card border-0 rounded-0">
+                <img
+                  src="/img/coll4.svg"
+                  class="card-img-top rounded-0"
+                  alt="Wedding Rings"
+                />
+                <div class="card-body px-0 px-sm-1 py-2 py-sm-3">
+                  <h5 class="card-title fw-bold">Wedding Rings</h5>
+                  <p class="card-text">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel section -->
+    <section class="container-fluid my-3 my-sm-5 py-lg-5">
+      <div class="carousel-sec">
+        <div class="collection-head">
+          <h3 class="text-center fw-bold">Explore Loose Diamonds</h3>
+          <p class="text-center pt-md-2 mx-auto pe-md-2">
+            Every diamond in our collection is selected for its superior cut,
+            symmetry, and shape.
+          </p>
+        </div>
+
+        <!-- carousel -->
+        <div class="carousel-container mt-5">
+          <div class="carousel py-2">
+            <div
+              class="carousel-card rounded-0 text-center card shadow-none d-none d-xl-block"
+            >
+              <img
+                src="/img/carsousel1.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Round</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+
+            <div
+              class="carousel-card rounded-0 text-center card shadow-none d-none d-xl-block"
+            >
+              <img
+                src="/img/carsousel2.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Emerald</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+
+            <div class="carousel-card rounded-0 text-center card shadow-none">
+              <img
+                src="/img/carsousel3.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Round</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+
+            <div class="carousel-card rounded-0 text-center card shadow-none">
+              <img
+                src="/img/carsousel4.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Oval</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+
+            <div class="carousel-card rounded-0 text-center card shadow-none">
+              <img
+                src="/img/carsousel5.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Heart</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+
+            <div
+              class="carousel-card rounded-0 text-center card shadow-none d-none d-xl-block"
+            >
+              <img
+                src="/img/carsousel6.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Asscher</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+
+            <div
+              class="carousel-card rounded-0 text-center card shadow-none d-none d-xl-block"
+            >
+              <img
+                src="/img/carsousel7.svg"
+                class="card-img-top"
+                alt="Diamond"
+              />
+              <div class="card-body border-top">
+                <h4 class="card-title fw-bold">Heart</h4>
+                <p class="card-text">Every diamond in our collection</p>
+              </div>
+            </div>
+          </div>
+          <div class="indicators">
+            <!-- Dynamically generated indicators will go here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- keep in touch section -->
+    <section class="container-fluid">
+      <div class="container px-md-5 tounch-sec">
+        <div class="row justify-content-between py-3 py-sm-4">
+          <!-- Left Side: Text Section -->
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-start pe-lg-5"
+          >
+            <h3 class="fw-bold text-center text-lg-start">Keep In Touch</h3>
+            <p class="touch-p mt-2 mt-lg-4 text-center text-lg-start">
+              Our lab created diamonds are the eco-conscious choice, and exhibit
+              the same sparkle as natural diamonds.
+            </p>
+            <div class="mt-5 pt-3 d-none d-lg-block">
+              <input
+                type="email"
+                class="w-100 border-0 border-bottom"
+                placeholder="Enter your email Id to subscribe"
+              />
+              <button class="text-light rounded-5 mt-4" type="button">
+                Sign Up
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side: Image Section -->
+          <div class="col-lg-6">
+            <div class="row g-3 justify-content-center">
+              <div class="col-5 col-lg-6">
+                <img
+                  src="/img/hand1.svg"
+                  class="img-fluid w-100 h-auto"
+                  alt="Image 1"
+                />
+              </div>
+              <div class="col-5 col-lg-6">
+                <img
+                  src="/img/hand2.svg"
+                  class="img-fluid w-100 h-auto"
+                  alt="Image 2"
+                />
+              </div>
+              <div class="col-5 col-lg-6">
+                <img
+                  src="/img/hand3.svg"
+                  class="img-fluid w-100 h-auto"
+                  alt="Image 3"
+                />
+              </div>
+              <div class="col-5 col-lg-6">
+                <img
+                  src="/img/hand4.svg"
+                  class="img-fluid w-100 h-auto"
+                  alt="Image 4"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 mt-lg-5 pt-3 d-block d-lg-none text-center">
+            <input
+              type="email"
+              class="w-75 border-0 border-bottom text-center"
+              placeholder="Enter your email Id to subscribe"
+            />
+            <button class="text-light rounded-5 mt-4" type="button">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <hr class="horiz d-none d-lg-block" />
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="container-fluid">
+      <div class="container px-md-5 mt-md-5">
+        <div class="upper-footer text-center py-4 pb-0 pb-lg-4">
+          <a class="navbar-brand" href="#">dimend<strong>SCAASI</strong></a>
+          <p class="foot-trust">20+ Years Of Trust</p>
+          <p class="pt-md-4 foot-jeweler mx-auto mb-0">
+            dimend SCAASI Jeweler is a unique Jewelry store located in Chicago
+            with an emphasis on great style and exceptional quality.
+          </p>
+        </div>
+        <hr class="horiz" />
+        <div class="lower-footer text-center pb-4">
+          <!-- Links Section -->
+          <div
+            class="footer-links mt-md-5 py-2 py-lg-0 d-flex flex-wrap justify-content-between mx-auto gap-xl-5"
+          >
+            <a href="#">Education</a>
+            <a href="#">About Us</a>
+            <a href="#">Customer Care</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <hr class="horiz d-block d-md-none" />
+
+          <!-- Logos Section -->
+          <div
+            class="footer-logos row justify-content-center align-items-center mt-md-5 pt-2 pt-lg-4"
+          >
+            <div class="col-3 col-md-auto">
+              <img src="/img/gia.svg" alt="GIA" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img/tower.svg" alt="Jewelers of America" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img/jvc.svg" alt="JVC" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img/keyround.svg" alt="BBB" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img/Visa.svg" alt="Visa" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img/Mastercard.svg" alt="Mastercard" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img//Discover.svg" alt="Discover" />
+            </div>
+            <div class="col-3 col-md-auto">
+              <img src="/img//Paypal.svg" alt="Paypal" />
+            </div>
+            <div class="col-3 col-md-auto d-none d-lg-block">
+              <img src="/img/rect.svg" alt="Paypal" />
+            </div>
+          </div>
+
+          <!-- Bottom Text Section -->
+          <div class="footer-bottom-text mt-4 mt-md-5">
+            dimendSCAASI™ and InnerView® are Registered Trademarks of dimend
+            SCAASI Ltd. © 2010-2020
+            <span class="d-none d-lg-inline">dimend SCAASI Ltd.</span>
+            <span class="mt-4 mt-lg-0 d-block d-lg-inline">
+              <a href="#">Terms Of Use</a> |
+              <a class="d-none d-lg-inline" href="#">Sitemap |</a>
+              <a href="#">Privacy Policy</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
